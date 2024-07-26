@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Header Detail - My Portfolio{% endblock %}
+
+{% block content %}
+    <section>
+        <h2 style="text-align: center; font-size: 26px;">Header Detail</h2>
+        <ul style="list-style: none; text-align: center;font-size: 22px;">
+            {% for header in headers %}
+                <li><b>{{ header.name }}</b></li>
+                <li>{{ header.designation }}</li>
+                <li>{{ header.title_line }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

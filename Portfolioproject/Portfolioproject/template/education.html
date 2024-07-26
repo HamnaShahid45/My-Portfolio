@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Education - My Portfolio{% endblock %}
+
+{% block content %}
+    <section >
+        <h2 style="text-align: center; font-size: 26px;">Education</h2>
+        <ul style="list-style: none; text-align: center; text-align: center;font-size: 22px;">
+            {% for education_item in education_items %}
+                <li>{{ education_item.degree }} - {{ education_item.institution }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

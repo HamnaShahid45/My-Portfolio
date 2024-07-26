@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Skill List{% endblock %}
+
+{% block content %}
+    <section>
+        <h2 style="text-align: center; font-size: 26px;">Skills</h2>
+        <ul  style="list-style: none; text-align: center; font-size: 22px;">
+            {% for skill in skills %}
+                <li>{{ skill.name }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

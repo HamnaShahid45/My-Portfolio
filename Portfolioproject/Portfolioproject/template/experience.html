@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Experience List{% endblock %}
+
+{% block content %}
+    <section>
+        <h2 style="text-align: center; font-size: 26px;">Experience</h2>
+        {% for experience in experiences %}
+            <article  style="font-size: 18px;">
+                <h3>{{ experience.company }}</h3>
+                <p>{{ experience.exp_description }}</p>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}

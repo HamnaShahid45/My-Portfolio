@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Form{% endblock %}
+
+{% block content %}
+    <section>
+        <h2  style="text-align: center; font-size: 26px;">Contact Me</h2>
+        <div style="border: 1px; height:200px; width: 100%;">
+            <div  style="width: 60%; float: left;">
+                <h2 style="font-size: 2rem;">Let's talk about business</h2>
+                <p>Now that you know a lot about me, let me know if you are interested to work with me.</p>
+            </div>
+            <div style="width: 40%; float:right; padding-top: 15px;">
+               <form action="" method="post" >
+                    {% csrf_token %}
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" size="50"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" size="50"><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="48"></textarea><br>
+                    <input type="submit" value="Send">
+                    {% if success %}
+                         <p>Your message has been sent successfully!</p>
+                    {% endif %}
+               </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

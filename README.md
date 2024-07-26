@@ -21,4 +21,4 @@ python manage.py runserver
 then it will give you an ip address like this  http://127.0.0.1:8000/  click on it and when website start running click on the address bar and write http://127.0.0.1:8000/admin
 login using email or password
 
-then you have to add your info in their specific options clicking add button and that info will be shown
+then you have to add your info in their specific options clicking add button and that info will be shown.
